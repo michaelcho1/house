@@ -46,7 +46,7 @@ Linear, Ridge, Lasso, ElasticNet, Random Forest, Gradient Boosting, and XGBoost 
 
 For Random Forest, Gradient Boosting, and XG Boost, Top 10 feature importances were generated. Overall Quality Scores, square footage of the general living area, and the car capacity of the garage contributed most to predicting sale price. 
 
-![feature](featuregroup.png)
+![feature](featuregroup.png) 
 
 ## Results
 In the end, Elastic Net performed the best followed by Ridge and Lasso regressions. All regressions had an root mean squared error of around 18,000, the amount of error an investor should expect the prediction to vary. 
