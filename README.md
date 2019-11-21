@@ -12,12 +12,15 @@ This project aims to predict  housing prices in Ames, Iowa using the Ames Housin
 4. Dropping Correlated Variables to Avoid Multicollinearity
 
 1. First, by looking at the target variable, 'Sale Price', the distribution is positively skewed, violating the assumption of Linear Regression, so I Log (Sale Price) to get a more normal distribution. I also look at the x-variable features that have high skewness and decide to apply a boxcox transformation for skewness greater than 0.65.
+
 ![Log (Sale Price)](logsaleprice.png)
 
 2. I look at both numerical and categorical variables to better understand the data and remove the outliers in the numerical data. Few variables are displayed below:
+
 ![EDA group](edagroup.png)
 
 3. At first glance, there are quite alot of missing values, but many of them are missing because they simply do not have the feature. However I will drop PoolQC (Pool Quality), Misc. Features, Alley, Fence, and Fireplace Quality due to large amount of constants and I do not believe they are strong drivers of Sale Price. (Regression was tested with and without these features and model was better without)
+
 ![missing values](missing.png)
 
 PoolQC: NA = No Pool
@@ -37,11 +40,15 @@ Electrical: imputed with the mode. only missing one.
 After dummifying categorical features and train-test split, we are ready to move to Regression models.
 
 ## Regression Models
-Linear, Ridge, Lasso, ElasticNet, Random Forest, Gradient Boosting, and XGBoost Regression were performed on this data and optimal hyperparameters were tuned using GridSearch. For Random Forest, Gradient Boosting, and XG Boost, Top 10 feature importances were generated. Overall Quality Scores, square footage of the general living area, and the car capacity of the garage contributed most to predicting sale price. 
+Linear, Ridge, Lasso, ElasticNet, Random Forest, Gradient Boosting, and XGBoost Regression were performed on this data and optimal hyperparameters were tuned using GridSearch. 
 
 ![regression](regressiongroup.png)
+
+For Random Forest, Gradient Boosting, and XG Boost, Top 10 feature importances were generated. Overall Quality Scores, square footage of the general living area, and the car capacity of the garage contributed most to predicting sale price. 
+
 ![feature](featuregroup.png)
 
+## Results
 In the end, Elastic Net performed the best followed by Ridge and Lasso regressions. All regressions had an root mean squared error of around 18,000, the amount of error an investor should expect the prediction to vary. 
-![results](regressiongroup.png)
+![results](results.png)
 
