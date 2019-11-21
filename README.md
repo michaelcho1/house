@@ -51,4 +51,4 @@ For Random Forest, Gradient Boosting, and XG Boost, Top 10 feature importances w
 ## Results
 In the end, Elastic Net performed the best followed by Ridge and Lasso regressions. All regressions had an root mean squared error of around 18,000, the amount of error an investor should expect the prediction to vary. 
 ![results](png/results.png)
-
+ 
