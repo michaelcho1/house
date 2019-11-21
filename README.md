@@ -44,11 +44,11 @@ Linear, Ridge, Lasso, ElasticNet, Random Forest, Gradient Boosting, and XGBoost 
 
 ![regression](png/regressiongroup.png)
 
-For Random Forest, Gradient Boosting, and XG Boost, Top 10 feature importances were generated. Overall Quality Scores, square footage of the general living area, and the car capacity of the garage contributed most to predicting sale price. 
+For Random Forest, Gradient Boosting, and XG Boost, Top 10 feature importances were generated. Overall Quality Scores, square footage of the general living area, and the car capacity of the garage contributed most to predicting sale price. Linear Regression coefficients showed similar results by showing that Ground Living Area SF, Total Basement SF, Year Built, and Overall Quality as significant variables. 
 
 ![feature](png/featuregroup.png) 
 
 ## Results
-In the end, Elastic Net performed the best followed by Ridge and Lasso regressions. All regressions had an root mean squared error of around 18,000, the amount of error an investor should expect the prediction to vary. 
+In the end, Elastic Net performed the best followed by Ridge and Lasso regressions. The top three regressions (Elastic Net, Lasso, and Ridge) had an root mean squared error of around 18,000, the amount of error an investor should expect the prediction to vary. Majority of the models agree that Overall Quality (the overal material and finish of the house) and total square footage  whether in the basement, living area or garage, are strong indicators of house sale prices. 
 ![results](png/results.png)
  
